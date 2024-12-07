@@ -12,6 +12,7 @@ const {rootDir} = require("./util/pathUtil");
 const voterRouter=require('./routes/voterRouter');
 const hostRouter=require('./routes/hostRouter');
 const db=require('./util/mongoDbUtils');
+require('dotenv').config();
 
 app.set('view engine','ejs');
 app.set('views','views');

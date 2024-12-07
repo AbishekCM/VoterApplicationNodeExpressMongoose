@@ -1,5 +1,8 @@
+require('dotenv').config();
+
 const mongoose=require('mongoose');
-const MONGO_URI="mongodb://127.0.0.1:27017/voters";
+//const MONGO_URI=process.env.MONGODB_URL_LOCAL;
+const MONGO_URI=process.env.MONGODB_URL;
 
 
 mongoose.connect(MONGO_URI);
