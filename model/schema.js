@@ -1,30 +1,25 @@
-const mongoose=require('mongoose');
+//require('dotenv').config();
+const mongoose = require("mongoose");
 
 
-const voterSchema=new mongoose.Schema({
-  name:{
-    type:String,
-    required:true
-
+const voterSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
   },
-  municipality:{
-    type:String,
-    required:true
+  municipality: {
+    type: String,
+    required: true,
   },
-  age:{
-    type:Number,
-    required:true
+  age: {
+    type: Number,
+    required: true,
   },
-  votingStatus:{
-    type:String
-
-  }
-  
-
-
-
+  votingStatus: {
+    type: String,
+  },
 });
 
-const Voter=mongoose.model('Voter',voterSchema);
+const Voter = mongoose.model("Voter", voterSchema);
 
-module.exports={Voter};
+module.exports = { Voter };
