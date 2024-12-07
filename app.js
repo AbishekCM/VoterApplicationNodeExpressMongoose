@@ -7,7 +7,7 @@ const express = require("express");
 const app = express();
 
 //local modules
-require("dotenv").config();
+
 const { rootDir } = require("./util/pathUtil");
 const voterRouter = require("./routes/voterRouter");
 const hostRouter = require("./routes/hostRouter");

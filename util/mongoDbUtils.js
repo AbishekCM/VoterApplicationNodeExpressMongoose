@@ -1,33 +1,28 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const mongoose=require('mongoose');
-
+const mongoose = require("mongoose");
 
 //const MONGO_URI=process.env.MONGODB_URL_LOCAL;
 
-const MONGO_URI=process.env.MONGODB_URL;
-
+const MONGO_URI = process.env.MONGODB_URL;
 
 mongoose.connect(MONGO_URI,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  tls: true,
+  tlsAllowInvalidCertificates: false
 });
 
-const db=mongoose.connection;
+const db = mongoose.connection;
 
-db.on('connected',()=>{
+db.on("connected", () => {
   console.log("Connected to MongoDb server");
 });
 
-db.on('error',(e)=>{
-  console.log("MongoDb Error:",e);
-})
+db.on("error", (e) => {
+  console.log("MongoDb Error:", e);
+});
 
-db.on('disconnected',()=>{
+db.on("disconnected", () => {
   console.log("MongoDb disconnected");
-})
+});
 
-module.exports={db};
-
-
-
+module.exports = { db };
