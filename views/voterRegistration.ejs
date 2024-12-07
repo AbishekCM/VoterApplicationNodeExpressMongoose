@@ -1,0 +1,21 @@
+<%- include('./partials/nav.ejs',{pageTitle:'Voter Registration'}) %>
+    <header>
+        <h1>Voter Registration Form</h1>
+    </header>
+    <form action="/voters" method="POST">
+        <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="municipality">Municipality</label>
+            <input type="text" id="municipality" name="municipality" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="18" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

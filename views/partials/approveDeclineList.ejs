@@ -1,0 +1,23 @@
+<% voters.forEach(element=> {%>
+
+  <h2>Voter Id: <%= element._id %>
+  </h2>
+
+
+  <% if(element.votingStatus==='Approved' ){ %>
+    <h2 style="color:green">Voting Status <%= element.votingStatus %>
+    </h2>
+
+    <% } else{%>
+      <h2 style="color: red;">Voting Status <%= element.votingStatus %>
+      </h2>
+      <%}%>
+
+        <h3>Name: <%= element.name %>
+        </h3>
+
+        <a href="/voters/voterDetails/<%= element._id %>">Details</a>
+
+
+
+        <% }); %>

@@ -1,0 +1,46 @@
+<%- include('./partials/nav.ejs',{pageTitle:'Voter Details'}) %>
+        <!-- Example of a voter div -->
+
+        <div class="voter">
+            <h2>Voter Id: <%= voter._id %>
+            </h2>
+
+
+            <% if(voter.votingStatus==='Approved' ){ %>
+                <h2 style="color:green">Voting Status <%= voter.votingStatus %>
+                </h2>
+
+                <% } else{%>
+                    <h2 style="color: red;">Voting Status <%= voter.votingStatus %>
+                    </h2>
+                    <%}%>
+
+
+                        <h3>Name: <%= voter.name %>
+                        </h3>
+                        <h4>Municipality:<%= voter.municipality %>
+                        </h4>
+                        <h5>Age: <%= voter.age %>
+                        </h5>
+                        <a href="/voterDelete/<%= voter._id %>">Delete</a><br>
+                        
+                        <a href="/voters/voterDetails/edit/<%= voter._id %>">Edit</a><br>
+
+
+                        <% if(voter.votingStatus==='Approved' ){ %>
+                            <a href='/declineVoter/<%= voter._id %>'>Decline Voting</a>
+
+                            <% } else{%>
+                                <a href='/approveVoter/<%= voter._id %>'>Approve Voting</a>
+                                <%}%>
+
+        </div>
+
+
+
+
+        <!-- Add more voter divs dynamically -->
+    </main>
+</body>
+
+</html>

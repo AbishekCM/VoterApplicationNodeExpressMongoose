@@ -1,0 +1,21 @@
+<%- include('./partials/nav.ejs',{pageTitle:'Declined Voters'}) %>
+        <div class="voter">
+            <h1><u> Not Approved Voter List(for Voting):</u></h1>
+
+        </div>
+        <!-- Example of a voter div -->
+         
+        <div class="voter">
+            <%- include('./partials/approveDeclineList.ejs',{voters:declinedVoters}) %>
+            
+        </div>
+        
+
+        
+
+        
+
+        <!-- Add more voter divs dynamically -->
+    </main>
+</body>
+</html>

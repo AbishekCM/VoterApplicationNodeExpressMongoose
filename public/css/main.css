@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 3px solid #0056b3;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  
+}
+
+/* Navigation Links */
+main a {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+main a:hover {
+  background-color: #0056b3;
+}
+
+/* Voter Card Styles */
+.voter {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.voter h2, .voter h3, .voter h4, .voter h5 {
+  margin: 10px 0;
+}
+
+.voter a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.voter a:hover {
+  background-color: #0056b3;
+}
+
+.voter h2[style="color:green"] {
+  color: #28a745 !important;
+}
+
+.voter h2[style="color:red"] {
+  color: #dc3545 !important;
+}
+
+/* Forms */
+form {
+  background-color: white;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Utility Classes */
+u {
+  text-decoration: none;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 2px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:floralwhite;
+  padding: 10px 20px;
+  
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color:blueviolet;
+  border-radius: 4px;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  main a {
+      margin: 5px 10px;
+      padding: 8px 12px;
+  }
+
+  .voter {
+      padding: 15px;
+  }
+
+  form {
+      padding: 15px;
+  }
+
+  form button {
+      font-size: 1rem;
+  }
+}

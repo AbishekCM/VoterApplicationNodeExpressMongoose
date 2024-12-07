@@ -1,0 +1,14 @@
+<%- include('./partials/nav.ejs',{pageTitle:'Approved Voters'}) %>
+
+  <div class="voter">
+    <h1><u>Approved Voter List(for Voting):</u></h1>
+  </div>
+
+  <div class="voter">
+    <%- include('./partials/approveDeclineList.ejs',{voters:approvedVoters}) %>
+  </div>
+
+  </main>
+  </body>
+
+  </html>
