@@ -76,5 +76,5 @@ class Voter {
     
   }
 }
-
+//comment for module exports
 //module.exports = { Voter };
